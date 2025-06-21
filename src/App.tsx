@@ -1,7 +1,8 @@
 import { useRef } from 'react';
-//import 'prismjs/components/prism-typescript'
-// import 'prismjs/components/prism-bash'
-// import 'prismjs/plugins/line-numbers/prism-line-numbers'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-bash'
+import 'prismjs/plugins/line-numbers/prism-line-numbers'
 
 import './App.css'
 
@@ -25,17 +26,11 @@ function App() {
   return (
     <>
       <div className="flex">
-        <div className="w-64 flex-1 bg-pink-500 m-4 rounded-md overflow-x-auto ...">
-          <div>
-            <div>
-              <pre className="line-numbers" data-line="10" >
-                <code ref={codeTestRef} className="language-typescript">
-                  {test}
-                </code>
-              </pre>
-            </div>
-          </div>
-        </div>
+        <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" data-line="10" >
+          <code ref={codeTestRef} className="language-typescript">
+            {test}
+          </code>
+        </pre>
       </div>    
     </>
   )
