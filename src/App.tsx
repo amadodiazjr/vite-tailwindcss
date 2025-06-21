@@ -5,6 +5,7 @@ import 'prismjs/components/prism-bash'
 import 'prismjs/plugins/line-numbers/prism-line-numbers'
 
 import './App.css'
+import NotFoundTestCode from './components/NotFoundTestCode';
 
 const test = `
 describe('sub page', () => { 
@@ -26,11 +27,12 @@ function App() {
   return (
     <>
       <div className="flex">
-        <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" data-line="10" >
+        {/* <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" data-line="10" >
           <code ref={codeTestRef} className="language-typescript">
             {test}
           </code>
-        </pre>
+        </pre> */}
+        <NotFoundTestCode codeTestRef={codeTestRef} />
       </div>    
     </>
   )
