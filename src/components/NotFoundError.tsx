@@ -21,15 +21,18 @@ type NotFoundErrorProps = {
 const NotFoundError: FC<NotFoundErrorProps> = ({consoleRef, errorRef}) => {
   return (
     <>
-      <div>
-        <div id={notFoundError.name} >
-          <pre ref={errorRef} >
-            <code ref={consoleRef} className={languageBash.name} >
-              {fail}
-            </code>
-          </pre>
-        </div>
-      </div>
+      {/* <div id={notFoundError.name} >
+        <pre ref={errorRef} className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" style={{margin: 0}} data-line="10" >
+          <code ref={consoleRef} className={languageBash.name} >
+            {fail}
+          </code>
+        </pre>
+      </div> */}
+      <pre ref={errorRef} className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" style={{margin: 0}} data-line="10" >
+        <code ref={consoleRef} className={languageBash.name} >
+          {fail}
+        </code>
+      </pre>
     </>
   )
 }

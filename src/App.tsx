@@ -6,6 +6,8 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers'
 
 import './App.css'
 import NotFoundTestCode from './components/NotFoundTestCode';
+import NotFoundError from './components/NotFoundError';
+import Footer from './components/Footer';
 
 const test = `
 describe('sub page', () => { 
@@ -23,17 +25,18 @@ describe('sub page', () => {
 
 function App() {
   const codeTestRef: any = useRef<HTMLElement>(null)
-
+  const consoleRef: any = useRef<HTMLElement>(null);
+  const errorRef: any = useRef<HTMLElement>(null);
+  
   return (
     <>
       <div className="flex">
-        {/* <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" data-line="10" >
-          <code ref={codeTestRef} className="language-typescript">
-            {test}
-          </code>
-        </pre> */}
         <NotFoundTestCode codeTestRef={codeTestRef} />
-      </div>    
+      </div>
+      <div className="flex">
+        <NotFoundError consoleRef={consoleRef} errorRef={errorRef} />
+      </div>
+      <Footer />
     </>
   )
 }

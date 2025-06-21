@@ -22,7 +22,7 @@ export type NotFoundErrorProps = {
 const NotFoundTestCode: FC<NotFoundErrorProps> = ({codeTestRef}) => {
   return (
     <>
-      <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" data-line="10" >
+      <pre className="line-numbers flex-1 bg-pink-500 rounded-md overflow-x-auto" style={{margin: 0}} data-line="10" >
         <code ref={codeTestRef} className={languageTypescript.name} >
           {test}
         </code>
