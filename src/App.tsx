@@ -30,13 +30,21 @@ function App() {
   
   return (
     <>
-      <div className="flex">
-        <NotFoundTestCode codeTestRef={codeTestRef} />
-      </div>
-      <div className="flex">
-        <NotFoundError consoleRef={consoleRef} errorRef={errorRef} />
-      </div>
-      <Footer />
+        {/* <div className="grid h-screen grid-cols-2 place-content-center gap-4 ..." style={{border: "1px solid red"}}>
+          <div style={{backgroundColor: "red"}}>01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 </div>
+          <div style={{backgroundColor: "blue"}}>02</div>
+          <div style={{backgroundColor: "green"}}>03</div>
+          <div style={{backgroundColor: "yellow"}}>04</div>
+        </div> */}
+
+        <div className="flex">
+          <NotFoundTestCode codeTestRef={codeTestRef} />
+        </div>
+        <div className="flex">
+          <NotFoundError consoleRef={consoleRef} errorRef={errorRef} />
+        </div>
+        <Footer  />
+      
     </>
   )
 }

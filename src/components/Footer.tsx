@@ -4,7 +4,7 @@ function Footer() {
   const year = new Date().getFullYear()
   return (
     <>
-      <p id={footer.name} ><span tabIndex={0}>&copy; {year} Testables LLC.  All rights reserved.</span></p>
+      <p id={footer.name} className="text-center fixed md:relative"><span tabIndex={0}>&copy; {year} Testables LLC.  All rights reserved.</span></p>
     </>
   )
 }
