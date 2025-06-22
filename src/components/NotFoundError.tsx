@@ -28,7 +28,7 @@ const NotFoundError: FC<NotFoundErrorProps> = ({consoleRef, errorRef}) => {
           </code>
         </pre>
       </div> */}
-      <pre ref={errorRef} className="line-numbers flex-1 rounded-md overflow-x-auto" style={{margin: 0}} data-line="10" >
+      <pre ref={errorRef} className="line-numbers flex-1 overflow-x-auto" style={{margin: 0}} data-line="10" >
         <code ref={consoleRef} className={languageBash.name} >
           {fail}
         </code>
